@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--First-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Chooser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXQ-pI-U4e">
+                                <rect key="frame" x="243" y="67" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QVT-OI-h8o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2z-cJ-RSq">
+                                <rect key="frame" x="0.0" y="134" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="zds-GC-TMF"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="0nF-J0-5Jk"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK3-Dj-KCf">
+                                <rect key="frame" x="321" y="363" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="z6E-Qg-ukN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DXQ-pI-U4e" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="47" id="EID-8U-UgU"/>
+                            <constraint firstItem="G2z-cJ-RSq" firstAttribute="top" secondItem="DXQ-pI-U4e" secondAttribute="bottom" constant="46" id="WVu-jV-cGf"/>
+                            <constraint firstAttribute="trailing" secondItem="G2z-cJ-RSq" secondAttribute="trailing" id="d5q-B7-4vT"/>
+                            <constraint firstItem="G2z-cJ-RSq" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="erv-qW-8dB"/>
+                            <constraint firstItem="UK3-Dj-KCf" firstAttribute="top" secondItem="G2z-cJ-RSq" secondAttribute="bottom" constant="13" id="j30-XD-B2e"/>
+                            <constraint firstItem="G2z-cJ-RSq" firstAttribute="centerX" secondItem="DXQ-pI-U4e" secondAttribute="centerX" id="vJj-S8-bzD"/>
+                            <constraint firstItem="UK3-Dj-KCf" firstAttribute="centerX" secondItem="G2z-cJ-RSq" secondAttribute="centerX" id="vTP-SF-2eu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="choiceLabel" destination="UK3-Dj-KCf" id="wMg-Ma-v0K"/>
+                        <outlet property="musicPicker" destination="G2z-cJ-RSq" id="RDa-vY-MHS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRR-0H-a3b">
+                                <rect key="frame" x="0.0" y="100" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="By7-BM-Fhp"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="F3I-hE-Ycn"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Chooser #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97W-eO-aw1">
+                                <rect key="frame" x="230" y="52" width="140" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RJ1-OY-fDA"/>
+                                    <constraint firstAttribute="width" constant="140" id="hRH-NR-Iz9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCx-jy-uQ9">
+                                <rect key="frame" x="321" y="329" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AfU-Cz-TJz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="97W-eO-aw1" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="32" id="01Y-Fq-Pd2"/>
+                            <constraint firstItem="DRR-0H-a3b" firstAttribute="top" secondItem="97W-eO-aw1" secondAttribute="bottom" constant="27" id="hBz-aF-cGO"/>
+                            <constraint firstItem="DRR-0H-a3b" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="hVt-fj-kWw"/>
+                            <constraint firstAttribute="trailing" secondItem="DRR-0H-a3b" secondAttribute="trailing" id="iJy-GH-CHM"/>
+                            <constraint firstItem="DRR-0H-a3b" firstAttribute="centerX" secondItem="sCx-jy-uQ9" secondAttribute="centerX" id="p3N-tH-zSf"/>
+                            <constraint firstItem="sCx-jy-uQ9" firstAttribute="top" secondItem="DRR-0H-a3b" secondAttribute="bottom" constant="13" id="tnd-6L-gBb"/>
+                            <constraint firstItem="97W-eO-aw1" firstAttribute="centerX" secondItem="DRR-0H-a3b" secondAttribute="centerX" id="vS0-Hj-JgS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="choiceLabel" destination="sCx-jy-uQ9" id="asm-42-3TY"/>
+                        <outlet property="musicPicker" destination="DRR-0H-a3b" id="HxN-As-k58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
