@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1E90211C5A74D4009106C1 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E90201C5A74D4009106C1 /* SearchResultsController.swift */; };
 		FCD6C4651C57D76E005AC3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6C4641C57D76E005AC3A3 /* AppDelegate.swift */; };
 		FCD6C4671C57D76E005AC3A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6C4661C57D76E005AC3A3 /* ViewController.swift */; };
 		FCD6C46A1C57D76E005AC3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD6C4681C57D76E005AC3A3 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC1E90201C5A74D4009106C1 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsController.swift; path = ../SearchResultsController.swift; sourceTree = "<group>"; };
 		FCD6C4611C57D76E005AC3A3 /* ScrabbleQwithoutU_grouped.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrabbleQwithoutU_grouped.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6C4641C57D76E005AC3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD6C4661C57D76E005AC3A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				FCD6C4641C57D76E005AC3A3 /* AppDelegate.swift */,
 				FCD6C4661C57D76E005AC3A3 /* ViewController.swift */,
+				FC1E90201C5A74D4009106C1 /* SearchResultsController.swift */,
 				FCD6C4681C57D76E005AC3A3 /* Main.storyboard */,
 				FCD6C46B1C57D76E005AC3A3 /* Assets.xcassets */,
 				FCD6C46D1C57D76E005AC3A3 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD6C4671C57D76E005AC3A3 /* ViewController.swift in Sources */,
+				FC1E90211C5A74D4009106C1 /* SearchResultsController.swift in Sources */,
 				FCD6C4651C57D76E005AC3A3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

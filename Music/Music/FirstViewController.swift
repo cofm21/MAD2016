@@ -15,8 +15,7 @@ class FirstViewController: UIViewController {
     
     let genre = ["Country", "Pop", "Rock", "Classical", "Alternative", "Hip Hop", "Jazz"]
     
-    //Methods to implement the picker
-    //Required for the UIPickerViewDataSource protocol
+    //Implement the picker
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -25,13 +24,12 @@ class FirstViewController: UIViewController {
         return genre.count
     }
     
-    //Picker Delegate methods
-    //returns the title for the row
+    //returns the title for row
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return genre[row]
     }
     
-    //Called when a row is selected
+    //called when row is selected
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         choiceLabel.text="You like \(genre[row])"
     }

@@ -17,36 +17,40 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //use NSBundle object of the directory for app to retrieve the pathname of qwords1.plist
-        let path = NSBundle.mainBundle().pathForResource("qwords2", ofType: "plist")
         
-        //load the words in plist file into the array
+        let path = NSBundle.mainBundle().pathForResource("qwordswithoutu2", ofType: "plist")
         allwords = NSDictionary(contentsOfFile: path!) as! [String : [String]]
-        
         letters = Array(allwords.keys)
+        letters.sortInPlace({$0 < $1})
         
-        letters.sortInPlace({$0 < $1}) //example of closure
+        // search results
+        let resultsController = SearchResultsController()
+        resultsController.allwords = allwords
+        resultsController.letters = letters
+        searchController = UISearchController(searchResultsController: resultsController)
+        
+        // search options
+        searchController.searchBar.placeholder = "Enter a search term"
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView=searchController.searchBar
+        searchController.searchResultsUpdater = resultsController
     }
     
-    //required methods for UITableViewDataSource
-    //number of rows in the section
+    // number of rows in the section
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let letter = letters[section]
         let letterSection = allwords[letter]! as [String]
-        return letterSection
+        return letterSection.count
     }
     
-    //Display table view cells
+    // displays table view cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let section = indexPath.section
         let letter = letters[section]
         let wordsSection = allwords[letter]! as [String]
-        
-        //dequeue an existing cell if one is available, or create a new one and add it to the table
+        // cell configurations
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath)
-        cell.textLabel?.text = words[indexPath.row]
-        cell.imageView?.image = UIImage(named: "scrabble_q.png")
-        cell.detailTextLabel?.text = "Q no U"
+        cell.textLabel?.text = wordsSection[indexPath.row]
         return cell
     }
     
@@ -59,7 +63,7 @@ class ViewController: UITableViewController {
         let okAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil)
         alert.addAction(okAction)
         presentViewController(alert, animated: true, completion: nil)
-        //tableView.deselectRowAtIndexPath(indexPath, animated: true) // deselects row that had been chosen
+        
     }
     
     
