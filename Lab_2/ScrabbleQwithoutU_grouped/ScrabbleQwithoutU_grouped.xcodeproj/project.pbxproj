@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC1E90211C5A74D4009106C1 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E90201C5A74D4009106C1 /* SearchResultsController.swift */; };
+		FC1E90231C5A7B81009106C1 /* qwordswithoutu2.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC1E90221C5A7B81009106C1 /* qwordswithoutu2.plist */; };
 		FCD6C4651C57D76E005AC3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6C4641C57D76E005AC3A3 /* AppDelegate.swift */; };
 		FCD6C4671C57D76E005AC3A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD6C4661C57D76E005AC3A3 /* ViewController.swift */; };
 		FCD6C46A1C57D76E005AC3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD6C4681C57D76E005AC3A3 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		FC1E90201C5A74D4009106C1 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsController.swift; path = ../SearchResultsController.swift; sourceTree = "<group>"; };
+		FC1E90221C5A7B81009106C1 /* qwordswithoutu2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = qwordswithoutu2.plist; sourceTree = "<group>"; };
 		FCD6C4611C57D76E005AC3A3 /* ScrabbleQwithoutU_grouped.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrabbleQwithoutU_grouped.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD6C4641C57D76E005AC3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD6C4661C57D76E005AC3A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				FCD6C46B1C57D76E005AC3A3 /* Assets.xcassets */,
 				FCD6C46D1C57D76E005AC3A3 /* LaunchScreen.storyboard */,
 				FCD6C4761C57DA63005AC3A3 /* qwords1.plist */,
+				FC1E90221C5A7B81009106C1 /* qwordswithoutu2.plist */,
 				FCD6C4701C57D76E005AC3A3 /* Info.plist */,
 			);
 			name = ScrabbleQwithoutU_grouped;
@@ -130,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1E90231C5A7B81009106C1 /* qwordswithoutu2.plist in Resources */,
 				FCD6C46F1C57D76E005AC3A3 /* LaunchScreen.storyboard in Resources */,
 				FCD6C4771C57DA63005AC3A3 /* qwords1.plist in Resources */,
 				FCD6C46C1C57D76E005AC3A3 /* Assets.xcassets in Resources */,

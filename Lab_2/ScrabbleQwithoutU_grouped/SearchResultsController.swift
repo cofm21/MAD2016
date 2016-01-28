@@ -20,29 +20,32 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifier")
 
-        // Uncomment the following line to preserve selection between presentations
+        // Selection persists
         self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // Edit button in navigation bar
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        let searchString = searchController.searchBar.text //search string
-        filteredWords.removeAll(keepCapacity: true) // removes all elements
+        let searchString = searchController.searchBar.text
+        filteredWords.removeAll(keepCapacity: true)
         if searchString?.isEmpty == false {
             print("not empty")
-            // closure that will be called for each word to see if it matches the search string
+            // checks if each word matches a string
+            
             let filter: String -> Bool = { name in
-                // look for the search string as a substring of the word
+                // substrings will be search
+                
                 let range = name.rangeOfString(searchString!, options: NSStringCompareOptions.CaseInsensitiveSearch)
-                return range != nil // returns true if the value matches and false if there’s no match
+                return range != nil // true if match, false if no match
             }
+            
             // iterate over all the letters
             for key in letters {
-                let wordsForKeys = allwords[key]! // array of names for each key
-                let matches = wordsForKeys.filter(filter) // filter using the closure
-                filteredWords.appendContentsOf(matches) // add words that match
+                let wordsForKeys = allwords[key]!
+                let matches = wordsForKeys.filter(filter)
+                filteredWords.appendContentsOf(matches) //append words that match
             }
         }
         tableView.reloadData() //reload table data with search results

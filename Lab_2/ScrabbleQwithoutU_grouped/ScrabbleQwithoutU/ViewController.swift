@@ -51,6 +51,7 @@ class ViewController: UITableViewController {
         // cell configurations
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath)
         cell.textLabel?.text = wordsSection[indexPath.row]
+        cell.detailTextLabel?.text = "Q no U"
         return cell
     }
     
@@ -59,7 +60,7 @@ class ViewController: UITableViewController {
         let section = indexPath.section
         let letter = letters[section]
         let wordsSection = allwords[letter]! as [String]
-        let alert = UIAlertController(title: "Row selected", message: "You selected \(wordsSection[indexPath.row])", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Row has been tapped", message: "You tapped \(wordsSection[indexPath.row]). Nice!", preferredStyle: UIAlertControllerStyle.Alert)
         let okAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil)
         alert.addAction(okAction)
         presentViewController(alert, animated: true, completion: nil)
