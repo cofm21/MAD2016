@@ -22,9 +22,6 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
 
         // Selection persists
         self.clearsSelectionOnViewWillAppear = false
-
-        // Edit button in navigation bar
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
@@ -35,20 +32,19 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
             // checks if each word matches a string
             
             let filter: String -> Bool = { name in
-                // substrings will be search
                 
                 let range = name.rangeOfString(searchString!, options: NSStringCompareOptions.CaseInsensitiveSearch)
-                return range != nil // true if match, false if no match
+                return range != nil
             }
             
             // iterate over all the letters
             for key in letters {
                 let wordsForKeys = allwords[key]!
                 let matches = wordsForKeys.filter(filter)
-                filteredWords.appendContentsOf(matches) //append words that match
+                filteredWords.appendContentsOf(matches)
             }
         }
-        tableView.reloadData() //reload table data with search results
+        tableView.reloadData()
     }
 
 

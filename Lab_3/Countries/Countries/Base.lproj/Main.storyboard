@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List of Continents-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,16 +28,16 @@
                             <outlet property="delegate" destination="BYZ-38-t0r" id="rHq-g5-7SW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Agc-Mm-UhR"/>
+                    <navigationItem key="navigationItem" title="List of Continents" id="Agc-Mm-UhR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1011" y="-355"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--List of Continents-->
         <scene sceneID="GVI-Ge-TcV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VB4-lU-iFn" sceneMemberID="viewController">
+                <navigationController title="List of Continents" automaticallyAdjustsScrollViewInsets="NO" id="VB4-lU-iFn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZQw-bb-GW6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

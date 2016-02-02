@@ -48,6 +48,7 @@ class ViewController: UITableViewController {
         let section = indexPath.section
         let letter = letters[section]
         let wordsSection = allwords[letter]! as [String]
+        
         // cell configurations
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath)
         cell.textLabel?.text = wordsSection[indexPath.row]
@@ -55,7 +56,7 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    //UITableViewDelegate method that is called when a row is selected
+    //UITableViewDelegate method
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let section = indexPath.section
         let letter = letters[section]
@@ -72,12 +73,11 @@ class ViewController: UITableViewController {
         return letters.count
     }
     
-    //sets the header value for each section
+    // sets the header value for each section
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return letters[section]
     }
     
-    //adds a section index
     override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
         return letters
     }
