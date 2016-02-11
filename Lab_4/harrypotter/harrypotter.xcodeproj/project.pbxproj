@@ -13,6 +13,7 @@
 		FC6725031C6CEFB200174762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6725011C6CEFB200174762 /* Main.storyboard */; };
 		FC6725051C6CEFB200174762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6725041C6CEFB200174762 /* Assets.xcassets */; };
 		FC6725081C6CEFB200174762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6725061C6CEFB200174762 /* LaunchScreen.storyboard */; };
+		FC6725101C6CF4C600174762 /* harrypotter.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC67250F1C6CF4C600174762 /* harrypotter.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FC6725041C6CEFB200174762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC6725071C6CEFB200174762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC6725091C6CEFB200174762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC67250F1C6CF4C600174762 /* harrypotter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = harrypotter.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				FC6725011C6CEFB200174762 /* Main.storyboard */,
 				FC6725041C6CEFB200174762 /* Assets.xcassets */,
 				FC6725061C6CEFB200174762 /* LaunchScreen.storyboard */,
+				FC67250F1C6CF4C600174762 /* harrypotter.plist */,
 				FC6725091C6CEFB200174762 /* Info.plist */,
 			);
 			path = harrypotter;
@@ -128,6 +131,7 @@
 				FC6725081C6CEFB200174762 /* LaunchScreen.storyboard in Resources */,
 				FC6725051C6CEFB200174762 /* Assets.xcassets in Resources */,
 				FC6725031C6CEFB200174762 /* Main.storyboard in Resources */,
+				FC6725101C6CF4C600174762 /* harrypotter.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
