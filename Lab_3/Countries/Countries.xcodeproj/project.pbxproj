@@ -14,6 +14,7 @@
 		FC27611E1C5A847400BD179F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC27611C1C5A847400BD179F /* LaunchScreen.storyboard */; };
 		FC2761261C5A867B00BD179F /* continents.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC2761251C5A867B00BD179F /* continents.plist */; };
 		FC2761281C5A86DD00BD179F /* Continents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2761271C5A86DD00BD179F /* Continents.swift */; };
+		FCC23BB11C7362C700E8DA46 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC23BB01C7362C700E8DA46 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FC27611F1C5A847400BD179F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2761251C5A867B00BD179F /* continents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = continents.plist; sourceTree = "<group>"; };
 		FC2761271C5A86DD00BD179F /* Continents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Continents.swift; sourceTree = "<group>"; };
+		FCC23BB01C7362C700E8DA46 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				FC2761151C5A847400BD179F /* ViewController.swift */,
 				FC2761271C5A86DD00BD179F /* Continents.swift */,
 				FC2761171C5A847400BD179F /* Main.storyboard */,
+				FCC23BB01C7362C700E8DA46 /* DetailTableViewController.swift */,
 				FC27611A1C5A847400BD179F /* Assets.xcassets */,
 				FC27611C1C5A847400BD179F /* LaunchScreen.storyboard */,
 				FC2761251C5A867B00BD179F /* continents.plist */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC23BB11C7362C700E8DA46 /* DetailTableViewController.swift in Sources */,
 				FC2761281C5A86DD00BD179F /* Continents.swift in Sources */,
 				FC2761161C5A847400BD179F /* ViewController.swift in Sources */,
 				FC2761141C5A847400BD179F /* AppDelegate.swift in Sources */,
@@ -292,6 +296,7 @@
 				FC2761241C5A847400BD179F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
