@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BoE-E5-m8K">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="sKC-bR-xdJ">
+            <objects>
+                <collectionViewController id="BoE-E5-m8K" customClass="CollectionViewController" customModule="Picture_Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="I9E-ec-IxQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jPL-4l-vw2">
+                            <size key="itemSize" width="85" height="105"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="g8k-2C-Rn6" customClass="CollectionViewCell" customModule="Picture_Collection" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-MU-qMv">
+                                            <rect key="frame" x="2" y="2" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="DFT-MU-qMv" firstAttribute="top" secondItem="g8k-2C-Rn6" secondAttribute="top" constant="2" id="D7V-do-Uiw"/>
+                                    <constraint firstItem="DFT-MU-qMv" firstAttribute="leading" secondItem="g8k-2C-Rn6" secondAttribute="leading" constant="2" id="THC-5N-9dq"/>
+                                    <constraint firstAttribute="bottom" secondItem="DFT-MU-qMv" secondAttribute="bottom" constant="2" id="aVs-yM-wjH"/>
+                                    <constraint firstAttribute="trailing" secondItem="DFT-MU-qMv" secondAttribute="trailing" constant="2" id="kG3-qf-uTL"/>
+                                </constraints>
+                                <size key="customSize" width="104" height="104"/>
+                                <connections>
+                                    <outlet property="imageView" destination="DFT-MU-qMv" id="kKo-Tt-fJk"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="dOt-rK-TYV" customClass="CollectionSupplementaryView" customModule="Picture_Collection" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-M2-RFP">
+                                    <rect key="frame" x="8" y="14" width="116" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <connections>
+                                <outlet property="headerLabel" destination="YoZ-M2-RFP" id="XEA-5O-AUu"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="BoE-E5-m8K" id="7yH-2C-QQM"/>
+                            <outlet property="delegate" destination="BoE-E5-m8K" id="i6f-wY-stP"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5k-5n-omX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="193"/>
+        </scene>
+    </scenes>
+</document>
