@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC40A6281C762464000F90E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40A6271C762464000F90E4 /* DetailViewController.swift */; };
 		FC4798DD1C7384A10007430D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4798DC1C7384A10007430D /* AppDelegate.swift */; };
 		FC4798E21C7384A10007430D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4798E01C7384A10007430D /* Main.storyboard */; };
 		FC4798E41C7384A10007430D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4798E31C7384A10007430D /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC40A6271C762464000F90E4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FC4798D91C7384A10007430D /* Picture_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picture_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4798DC1C7384A10007430D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4798E11C7384A10007430D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				FC4798DC1C7384A10007430D /* AppDelegate.swift */,
 				FC4798E01C7384A10007430D /* Main.storyboard */,
+				FC40A6271C762464000F90E4 /* DetailViewController.swift */,
 				FC4798F21C73944D0007430D /* CollectionSupplementaryView.swift */,
 				FC4798F01C7385E80007430D /* CollectionViewCell.swift */,
 				FC4798EE1C7385120007430D /* CollectionViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				FC4798F31C73944D0007430D /* CollectionSupplementaryView.swift in Sources */,
 				FC4798EF1C7385120007430D /* CollectionViewController.swift in Sources */,
+				FC40A6281C762464000F90E4 /* DetailViewController.swift in Sources */,
 				FC4798DD1C7384A10007430D /* AppDelegate.swift in Sources */,
 				FC4798F11C7385E80007430D /* CollectionViewCell.swift in Sources */,
 			);
@@ -294,6 +298,7 @@
 				FC4798ED1C7384A10007430D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,9 +10,35 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var sharing = false
+    var selectedImages = [String]()
     let reuseIdentifier = "Cell"
     //holds the name of the images, not the actual images
     var expoImages = [String]()
+    
+    @IBAction func action(sender: AnyObject) {
+        var imageArray = [UIImage]()
+        if !selectedImages.isEmpty {
+            for imageName in selectedImages {
+                imageArray.append(UIImage(named: imageName)!)
+            }
+            let shareScreen = UIActivityViewController(activityItems: imageArray, applicationActivities: nil)
+            shareScreen.modalPresentationStyle = .Popover
+            shareScreen.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+            presentViewController(shareScreen, animated: true, completion: nil)
+        }
+        
+        sharing = !sharing
+        collectionView?.allowsMultipleSelection = sharing
+        collectionView?.selectItemAtIndexPath(nil, animated: true, scrollPosition: .None)
+        
+        if !sharing {
+            for cell in (collectionView?.visibleCells())!{
+                cell.backgroundColor = UIColor.blackColor()
+            }
+            selectedImages.removeAll(keepCapacity: false)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +47,12 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             expoImages.append("atlas" + String(i))
         }
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-        self.collectionView?.setCollectionViewLayout(layout, animated: true)
+        //let layout = UICollectionViewFlowLayout()
+        //layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        //self.collectionView?.setCollectionViewLayout(layout, animated: true)
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes// registers a reuseidentifier programatically
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -34,7 +60,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         // Do any additional setup after loading the view.
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let image = UIImage(named: expoImages[indexPath.row])
         
         // resizes the images to their normal size; overrides width and height set in storyboard.
@@ -53,15 +79,19 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetail" {
+            let indexPath = collectionView?.indexPathForCell(sender as! CollectionViewCell)
+            let detailVC = segue.destinationViewController as! DetailViewController
+            detailVC.imageName = expoImages[(indexPath?.row)!]
+        }
+        
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -85,9 +115,15 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return cell
     }
     
+    /*func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        print("header size")
+        return CGSizeMake(50,50)
+    }*/
+    
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        var header: CollectionSupplementaryView?
-        if kind == UICollectionElementKindSectionHeader{
+        print("in supp method")
+        var header : CollectionSupplementaryView?
+        if kind == UICollectionElementKindSectionHeader {
             header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath) as? CollectionSupplementaryView
             header?.headerLabel.text = "Fall 2015"
         }
@@ -103,12 +139,27 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        if sharing {
+            let image = expoImages[indexPath.row]
+            if let foundIndex = selectedImages.indexOf(expoImages[indexPath.row]) {
+                //deselect and remove
+                selectedImages.removeAtIndex(foundIndex)
+                collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.blackColor()
+            } else {
+                // add and select
+                selectedImages.append(image)
+                collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.yellowColor()
+            }
+        }
+        else {
+            self.performSegueWithIdentifier("showDetail", sender: collectionView.cellForItemAtIndexPath(indexPath))
+        }
+        return false
     }
-    */
+
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
