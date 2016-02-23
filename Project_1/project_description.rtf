@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 Description \'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 \
+	The main idea of my application is to connect local marijuana dispensaries in Boulder to customers who do not have stable transportation or are disabled. The application would be a platform for delivery drivers and clients. Driver\'92s would use the application to respond to client\'92s who send out a request for a certain order from a particular dispensary. Clients would use the application with a user profile in order to request orders. A validation process would occur in the application where a client can only request orders once they verify their age. I\'92m thinking that the user will enter their driver\'92s license number which can be checked to verify they are 21. If that is not feasible, then the driver could verify the user\'92s age when they bring the delivery. The application would be similar to Uber in it\'92s user interface. A profile, map, and order section will be the main part of the application with settings and verification filling in the rest. \
+\
+\'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 Pseudocode \'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 \
+	Upon opening the app, the user will be see a simple login screen. If they do not have an account, they can choose to sign up. When creating an account, the user will enter basic information about themselves (name, age, gender, address). After entering there information, they will be brought to a screen to verify the user\'92s age. Hopefully, they will be able to enter the information on their driver\'92s license and upon hitting submit, a function will run that will check their information against a database. After the verification process is complete the user will be brought the to home screen.\
+\
+	The home screen will be a map, positioned at the user\'92s location. The map will be populated with local dispensaries that the user can click on to be brought to an information page about the dispensary. If the user does not want to scroll through the map, an \'91Order\'92 button will be in the top right of the map, that allows users to select from a list which dispensary they like. Clicking \'91Order\'92 on the information page or top right corner, will lead the user to a detailed ordering screen.\
+\
+	The ordering page will allow the user to select a product from the dispensary. A total with tax and delivery fee will be updated at the bottom of the screen. Then the user will hit submit and be brought back to the map screen.\
+\
+	A notification will appear at the top saying, \'93searching for drivers\'94. Once a driver has accepted the order, the driver\'92s location will appear on the map. The user will be able to follow the driver from their current location, to the dispensary, and then to their address. Once the driver has arrived, the user will be sent a notification. Once the driver has completed the delivery (made sure the client was 21 and delivered the correct items), the driver will hit complete in his application. \
+\
+\'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 Visual Design \'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 \
+	I want my application to visually look very similar to Uber\'92s layout. For the information page and map, I want to have a similar style to this webpage: {\field{\*\fldinst{HYPERLINK "https://wheresweed.com/denver/marijuana-dispensaries/denver-dispensary-co"}}{\fldrslt https://wheresweed.com/denver/marijuana-dispensaries/denver-dispensary-co}}. \
+\
+\'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 Testing \'97 \'97 \'97 \'97 \'97 \'97 \'97 \'97 \
+	For the first project, my main goal is to make the user\'92s profile page, the map, and allow them to make fake orders. Driver\'92s and verification will be implemented at a later stage. In order to test the user profile part of the application, I will make sure that any data that is entered is persistent. As well, I would like to have at least 10 users registered in order to make sure the application can handle multiple user accounts. \
+	In order to test the ordering process. I would like the map to have one local dispensary that when tapped will lead to an information page about the dispensary. After tapping \'91Order\'92 the user will be brought to a page that is loaded with fake products for the user to choose. After selecting their order, the total cost should be updated accordingly. Once the user hit\'92s submit, the application will show a route from the user\'92s address to the dispensary. The user can hit \'91Cancel\'92 at anytime to remove the route and order, and return to the map screen in it\'92s normal state. }
