@@ -20,6 +20,13 @@ class ToDoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshList", name: "ListShouldRefresh", object: nil)
+    }
+    
+    func refreshList() {
+        tableView.reloadData()
+        self.setBadgeNumber()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,6 +90,7 @@ class ToDoTableViewController: UITableViewController {
             notification.soundName = UILocalNotificationDefaultSoundName
             notification.userInfo = ["title": item.name, "UUID": item.id]
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            self.setBadgeNumber()
         }
     }
 
@@ -95,17 +103,39 @@ class ToDoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            removeNotification(items[indexPath.row])
+            items.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            self.setBadgeNumber()
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+    func removeNotification(item: ToDoItem) {
+        for notification in UIApplication.sharedApplication().scheduledLocalNotifications! as [UILocalNotification] {
+            if notification.userInfo!["UUID"] as! String == item.id {
+                UIApplication.sharedApplication().cancelLocalNotification(notification)
+                
+            }
+        }
+    }
+    
+    func setBadgeNumber() {
+        var badgeNumber = 0
+        for item in items{
+            if item.overDue() {
+                badgeNumber++
+            }
+        }
+        UIApplication.sharedApplication().applicationIconBadgeNumber = badgeNumber
+    }
+    
 
     /*
     // Override to support rearranging the table view.

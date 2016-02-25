@@ -20,6 +20,9 @@ class ItemViewController: UIViewController, UITextFieldDelegate {
         
         itemtextField.delegate = self
         
+        checkNotify()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -32,6 +35,17 @@ class ItemViewController: UIViewController, UITextFieldDelegate {
                 
             }
         }
+    }
+    
+    func checkNotify() {
+        let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
+        if settings?.types.rawValue == 0 {
+            let alert = UIAlertController(title: "Can't schedule notifications", message: "Please go to settings to enable notifications", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(action)
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
