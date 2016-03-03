@@ -1,0 +1,6 @@
+framework module Pods_medtome {
+  umbrella header "Pods-medtome-umbrella.h"
+
+  export *
+  module * { export * }
+}
