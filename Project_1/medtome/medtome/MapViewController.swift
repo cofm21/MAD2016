@@ -18,28 +18,28 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var latDelta:CLLocationDegrees = 0.1
+        let latDelta:CLLocationDegrees = 0.1
         
-        var lonDelta:CLLocationDegrees = 0.1
+        let lonDelta:CLLocationDegrees = 0.1
         
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
         
         /* BOULDER */
-        var latitude:CLLocationDegrees = 40.0274
+        let latitude:CLLocationDegrees = 40.0274
         
-        var longitude:CLLocationDegrees = -105.2519
+        let longitude:CLLocationDegrees = -105.2519
         
-        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
         /* ------ */
         
         /* Karing Kind */
-        var kkLat:CLLocationDegrees = 40.080980
+        let kkLat:CLLocationDegrees = 40.080980
         
-        var kkLon:CLLocationDegrees = -105.281145
+        let kkLon:CLLocationDegrees = -105.281145
         
-        var kkLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(kkLat, kkLon)
+        let kkLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(kkLat, kkLon)
         
-        var kkAnnotation = MKPointAnnotation()
+        let kkAnnotation = MKPointAnnotation()
         kkAnnotation.coordinate = kkLoc
         kkAnnotation.title = "Karing Kind"
         kkAnnotation.subtitle = "A great dispensary"
@@ -47,13 +47,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         /* ------ */
         
         /* Trill Alternatives */
-        var trillLat:CLLocationDegrees = 40.019390
+        let trillLat:CLLocationDegrees = 40.019390
         
-        var trillLon:CLLocationDegrees = -105.275184
+        let trillLon:CLLocationDegrees = -105.275184
         
-        var trillLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(trillLat, trillLon)
+        let trillLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(trillLat, trillLon)
         
-        var trillAnnotation = MKPointAnnotation()
+        let trillAnnotation = MKPointAnnotation()
         trillAnnotation.coordinate = trillLoc
         trillAnnotation.title = "Trill Alternatives"
         trillAnnotation.subtitle = "A medical dispensary and personal favorite"
@@ -61,13 +61,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         /* ------ */
         
         /* Terrapin */
-        var terrapinLat:CLLocationDegrees = 40.025515
+        let terrapinLat:CLLocationDegrees = 40.025515
         
-        var terrapinLon:CLLocationDegrees = -105.264663
+        let terrapinLon:CLLocationDegrees = -105.264663
         
-        var terrapinLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(terrapinLat, terrapinLon)
+        let terrapinLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(terrapinLat, terrapinLon)
         
-        var terrapinAnnotation = MKPointAnnotation()
+        let terrapinAnnotation = MKPointAnnotation()
         terrapinAnnotation.coordinate = terrapinLoc
         terrapinAnnotation.title = "Terrapin Recreational"
         terrapinAnnotation.subtitle = "A 21+ dispensary with great prices"
@@ -75,13 +75,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         /* ------ */
         
         /* Dandelion */
-        var dandelionLat:CLLocationDegrees = 40.016371
+        let dandelionLat:CLLocationDegrees = 40.016371
         
-        var dandelionLon:CLLocationDegrees = -105.284096
+        let dandelionLon:CLLocationDegrees = -105.284096
         
-        var dandelionLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(dandelionLat, dandelionLon)
+        let dandelionLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(dandelionLat, dandelionLon)
         
-        var dandelionAnnotation = MKPointAnnotation()
+        let dandelionAnnotation = MKPointAnnotation()
         dandelionAnnotation.coordinate = dandelionLoc
         dandelionAnnotation.title = "The Dandelion"
         dandelionAnnotation.subtitle = "Famous for it's in house strains"
@@ -89,13 +89,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         /* ------ */
         
         /* My Location */
-        var driverLat:CLLocationDegrees = 40.029092
+        let driverLat:CLLocationDegrees = 40.029092
         
-        var driverLon:CLLocationDegrees = -105.258605
+        let driverLon:CLLocationDegrees = -105.258605
         
-        var driverLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(driverLat, driverLon)
+        let driverLoc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(driverLat, driverLon)
         
-        var driverAnnotation = MKPointAnnotation()
+        let driverAnnotation = MKPointAnnotation()
         driverAnnotation.coordinate = driverLoc
         driverAnnotation.title = "I am a driver"
         driverAnnotation.subtitle = "here is my route to the dispensary"
@@ -103,7 +103,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         /* ------ */
         
         
-        var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
         map.setRegion(region, animated: true)
         
@@ -114,7 +114,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let location = CLLocationCoordinate2D(
+        var location = CLLocationCoordinate2D(
             latitude: -73.761105,
             longitude: 41.017791
         )

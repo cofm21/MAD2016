@@ -25,21 +25,21 @@ class ViewController: UIViewController {
     @IBAction func continueButton(sender: UIButton) {
         performSegueWithIdentifier("map", sender: sender)
     }
+    
     func sendData() {
+        
+        var name = username.text!
+        var userEmail = email.text
         
         // Create a reference to a Firebase location
         var myRootRef = Firebase(url:"https://medtome.firebaseio.com")
         
         var usersRef = myRootRef.childByAppendingPath("users")
-        var name = username.text!
-        
+
         var newRef = usersRef.childByAppendingPath(name)
-        
-        var userEmail = email.text
         
         var userData = ["email": email.text!, "password": password.text!]
         
-
         
         newRef.observeEventType(.Value, withBlock: { snapshot in
             var currEmail = snapshot.value.objectForKey("email")
@@ -51,7 +51,6 @@ class ViewController: UIViewController {
         usersRef.childByAppendingPath(name).setValue(userData)
         
         statusLabel.text = "Thank you \(name)! Tap continue to start ordering."
-        
         
     }
 
