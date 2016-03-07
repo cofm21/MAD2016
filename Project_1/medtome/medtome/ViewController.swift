@@ -36,21 +36,47 @@ class ViewController: UIViewController {
         
         var usersRef = myRootRef.childByAppendingPath("users")
 
-        var newRef = usersRef.childByAppendingPath(name)
+
         
         var userData = ["email": email.text!, "password": password.text!]
         
+        if username.text == "" {
+            
+            let alert = UIAlertController(title: "Error", message: "Please enter a username.", preferredStyle:UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else if email.text == "" {
+            
+            let alert = UIAlertController(title: "Error", message: "Please enter an email address.", preferredStyle:UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else if password.text == "" {
+            
+            let alert = UIAlertController(title: "Error", message: "Please enter a password.", preferredStyle:UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else {
         
-        newRef.observeEventType(.Value, withBlock: { snapshot in
-            var currEmail = snapshot.value.objectForKey("email")
-            print(currEmail)
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
+            var newRef = usersRef.childByAppendingPath(name)
+            
+            usersRef.childByAppendingPath(name).setValue(userData)
+            
+            statusLabel.text = "Thank you \(name)! Tap continue to start ordering."
+            newRef.observeEventType(.Value, withBlock: { snapshot in
+                var currEmail = snapshot.value.objectForKey("email")
+                print(currEmail)
+                }, withCancelBlock: { error in
+                    print(error.description)
+            })
+            
+        }
         
-        usersRef.childByAppendingPath(name).setValue(userData)
+
         
-        statusLabel.text = "Thank you \(name)! Tap continue to start ordering."
+
         
     }
 
