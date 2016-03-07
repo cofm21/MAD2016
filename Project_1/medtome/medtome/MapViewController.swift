@@ -4,19 +4,34 @@
 //
 //  Created by Connor McGuinness on 3/2/16.
 //  Copyright © 2016 Connor McGuinness. All rights reserved.
+//  
+//  References:
+//      https://www.hackingwithswift.com/read/19/3/annotations-and-accessory-views-mkpinannotationview
+//      https://www.udemy.com/the-complete-ios-9-developer-course/learn/#/
 //
 
 import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var map: MKMapView!
     
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let kk = Dispensary(title: "Karing Kind", coordinate: CLLocationCoordinate2D(latitude: 40.080980, longitude: -105.281145), info: "A high-end dispensary with expensive products.")
+        let trill = Dispensary(title: "Trill Alternatives", coordinate: CLLocationCoordinate2D(latitude: 40.019390, longitude: -105.275184), info: "A medical dispensary and personal favorite.")
+        let terrapin = Dispensary(title: "Terrapin Recreational", coordinate: CLLocationCoordinate2D(latitude: 40.025515, longitude: -105.264663), info: "A 21+ dispensary with great prices.")
+        let dandelion = Dispensary(title: "The Dandelion", coordinate: CLLocationCoordinate2D(latitude: 40.016371, longitude: -105.284096), info: "Famous for it's in house strains.")
+        let driver = Dispensary(title: "I am a driver", coordinate: CLLocationCoordinate2D(latitude: 40.029092, longitude: -105.258605), info: "Here is my current location.")
+        
+        map.addAnnotations([kk, trill, terrapin, dandelion, driver])
         
         let latDelta:CLLocationDegrees = 0.1
         
@@ -32,6 +47,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
         /* ------ */
         
+        
+        /*
         /* Karing Kind */
         let kkLat:CLLocationDegrees = 40.080980
         
@@ -42,8 +59,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let kkAnnotation = MKPointAnnotation()
         kkAnnotation.coordinate = kkLoc
         kkAnnotation.title = "Karing Kind"
-        kkAnnotation.subtitle = "A great dispensary"
-        map.addAnnotation(kkAnnotation)
+        kkAnnotation.subtitle = "A high-end dispensary with expensive products."
+        self.map.addAnnotation(kkAnnotation)
         /* ------ */
         
         /* Trill Alternatives */
@@ -56,8 +73,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let trillAnnotation = MKPointAnnotation()
         trillAnnotation.coordinate = trillLoc
         trillAnnotation.title = "Trill Alternatives"
-        trillAnnotation.subtitle = "A medical dispensary and personal favorite"
-        map.addAnnotation(trillAnnotation)
+        trillAnnotation.subtitle = "A medical dispensary and personal favorite."
+        self.map.addAnnotation(trillAnnotation)
         /* ------ */
         
         /* Terrapin */
@@ -70,8 +87,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let terrapinAnnotation = MKPointAnnotation()
         terrapinAnnotation.coordinate = terrapinLoc
         terrapinAnnotation.title = "Terrapin Recreational"
-        terrapinAnnotation.subtitle = "A 21+ dispensary with great prices"
-        map.addAnnotation(terrapinAnnotation)
+        terrapinAnnotation.subtitle = "A 21+ dispensary with great prices."
+        self.map.addAnnotation(terrapinAnnotation)
         /* ------ */
         
         /* Dandelion */
@@ -84,11 +101,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let dandelionAnnotation = MKPointAnnotation()
         dandelionAnnotation.coordinate = dandelionLoc
         dandelionAnnotation.title = "The Dandelion"
-        dandelionAnnotation.subtitle = "Famous for it's in house strains"
-        map.addAnnotation(dandelionAnnotation)
+        dandelionAnnotation.subtitle = "Famous for it's in house strains."
+        self.map.addAnnotation(dandelionAnnotation)
         /* ------ */
         
-        /* My Location */
+        /* Driver Location */
         let driverLat:CLLocationDegrees = 40.029092
         
         let driverLon:CLLocationDegrees = -105.258605
@@ -98,48 +115,53 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let driverAnnotation = MKPointAnnotation()
         driverAnnotation.coordinate = driverLoc
         driverAnnotation.title = "I am a driver"
-        driverAnnotation.subtitle = "here is my route to the dispensary"
-        map.addAnnotation(driverAnnotation)
+        driverAnnotation.subtitle = "Here is my current location."
+        self.map.addAnnotation(driverAnnotation)
         /* ------ */
-        
+        */
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
-        map.setRegion(region, animated: true)
+        self.map.setRegion(region, animated: true)
         
 
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         
-        var location = CLLocationCoordinate2D(
-            latitude: -73.761105,
-            longitude: 41.017791
-        )
-        
-        
-        var locations = [CLLocation(latitude: 40.025515, longitude: -105.264663), CLLocation(latitude: 40.029092,longitude: -105.258605)]
-        var coordinates = locations.map({(location: CLLocation!) -> CLLocationCoordinate2D in return location.coordinate})
-        var polyline = MKPolyline(coordinates: &coordinates, count: locations.count)
-        
-        self.map.addOverlay(polyline)
-        
-    }
-    
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
-        if overlay is MKPolyline {
-            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blueColor()
-            polylineRenderer.lineWidth = 5
-            return polylineRenderer
+        let identifier = "Dispensary"
+
+        if annotation.isKindOfClass(Dispensary.self) {
+
+            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            
+            if annotationView == nil {
+
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView!.canShowCallout = true
+                
+                let btn = UIButton(type: .DetailDisclosure)
+                annotationView!.rightCalloutAccessoryView = btn
+            } else {
+                
+                annotationView!.annotation = annotation
+            }
+            
+            return annotationView
         }
         
         return nil
     }
     
-
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        let dispensary = view.annotation as! Dispensary
+        let placeName = dispensary.title
+        //let placeInfo = dispensary.subtitle
+        
+        performSegueWithIdentifier(placeName!, sender: control)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

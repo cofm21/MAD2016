@@ -14,6 +14,8 @@
 		FC67C3DD1C85F8D900434F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC67C3DB1C85F8D900434F84 /* Main.storyboard */; };
 		FC67C3DF1C85F8D900434F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC67C3DE1C85F8D900434F84 /* Assets.xcassets */; };
 		FC67C3E21C85F8D900434F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC67C3E01C85F8D900434F84 /* LaunchScreen.storyboard */; };
+		FC7BDB511C8E3B2200E14B6A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7BDB501C8E3B2200E14B6A /* MapKit.framework */; };
+		FC7BDB531C8E3BBC00E14B6A /* Dispensary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BDB521C8E3BBC00E14B6A /* Dispensary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FC67C3DE1C85F8D900434F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC67C3E11C85F8D900434F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC67C3E31C85F8D900434F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7BDB501C8E3B2200E14B6A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FC7BDB521C8E3BBC00E14B6A /* Dispensary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispensary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7BDB511C8E3B2200E14B6A /* MapKit.framework in Frameworks */,
 				F4DFBD5FC15827A496B9F390 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +59,7 @@
 		A324BE55B6D8600705BD5AB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC7BDB501C8E3B2200E14B6A /* MapKit.framework */,
 				B893CF6B48E9232804B4E6D1 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -84,6 +90,7 @@
 				FC67C3D91C85F8D900434F84 /* ViewController.swift */,
 				FC67C3DB1C85F8D900434F84 /* Main.storyboard */,
 				FC5D4E411C87E95500F0313E /* MapViewController.swift */,
+				FC7BDB521C8E3BBC00E14B6A /* Dispensary.swift */,
 				FC67C3DE1C85F8D900434F84 /* Assets.xcassets */,
 				FC67C3E01C85F8D900434F84 /* LaunchScreen.storyboard */,
 				FC67C3E31C85F8D900434F84 /* Info.plist */,
@@ -126,6 +133,11 @@
 				TargetAttributes = {
 					FC67C3D31C85F8D900434F84 = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -214,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC67C3DA1C85F8D900434F84 /* ViewController.swift in Sources */,
+				FC7BDB531C8E3BBC00E14B6A /* Dispensary.swift in Sources */,
 				FC5D4E421C87E95500F0313E /* MapViewController.swift in Sources */,
 				FC67C3D81C85F8D900434F84 /* AppDelegate.swift in Sources */,
 			);

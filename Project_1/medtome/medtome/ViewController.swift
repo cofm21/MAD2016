@@ -35,8 +35,6 @@ class ViewController: UIViewController {
         var myRootRef = Firebase(url:"https://medtome.firebaseio.com")
         
         var usersRef = myRootRef.childByAppendingPath("users")
-
-
         
         var userData = ["email": email.text!, "password": password.text!]
         
