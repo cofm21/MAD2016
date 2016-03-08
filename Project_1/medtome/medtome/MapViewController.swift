@@ -25,11 +25,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let kk = Dispensary(title: "Karing Kind", coordinate: CLLocationCoordinate2D(latitude: 40.080980, longitude: -105.281145), info: "A high-end dispensary with expensive products.")
-        let trill = Dispensary(title: "Trill Alternatives", coordinate: CLLocationCoordinate2D(latitude: 40.019390, longitude: -105.275184), info: "A medical dispensary and personal favorite.")
-        let terrapin = Dispensary(title: "Terrapin Recreational", coordinate: CLLocationCoordinate2D(latitude: 40.025515, longitude: -105.264663), info: "A 21+ dispensary with great prices.")
-        let dandelion = Dispensary(title: "The Dandelion", coordinate: CLLocationCoordinate2D(latitude: 40.016371, longitude: -105.284096), info: "Famous for it's in house strains.")
-        let driver = Dispensary(title: "I am a driver", coordinate: CLLocationCoordinate2D(latitude: 40.029092, longitude: -105.258605), info: "Here is my current location.")
+        let kk = Dispensary(title: "Karing Kind", coordinate: CLLocationCoordinate2D(latitude: 40.080980, longitude: -105.281145), subtitle: "A high-end dispensary with expensive products.")
+        let trill = Dispensary(title: "Trill Alternatives", coordinate: CLLocationCoordinate2D(latitude: 40.019390, longitude: -105.275184), subtitle: "A medical dispensary and personal favorite.")
+        let terrapin = Dispensary(title: "Terrapin Recreational", coordinate: CLLocationCoordinate2D(latitude: 40.025515, longitude: -105.264663), subtitle: "A 21+ dispensary with great prices.")
+        let dandelion = Dispensary(title: "The Dandelion", coordinate: CLLocationCoordinate2D(latitude: 40.016371, longitude: -105.284096), subtitle: "Famous for it's in house strains.")
+        let driver = Dispensary(title: "I am a driver", coordinate: CLLocationCoordinate2D(latitude: 40.029092, longitude: -105.258605), subtitle: "Here is my current location.")
         
         map.addAnnotations([kk, trill, terrapin, dandelion, driver])
         
@@ -137,12 +137,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
             
             if annotationView == nil {
-
+                // Apple's annotations can be on the stack, therefore as long as annotationView is nil,
+                // add annotations with .DetailDisclosure
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView!.canShowCallout = true
                 
-                let btn = UIButton(type: .DetailDisclosure)
-                annotationView!.rightCalloutAccessoryView = btn
+                let detail = UIButton(type: .DetailDisclosure)
+                annotationView!.rightCalloutAccessoryView = detail
+                
             } else {
                 
                 annotationView!.annotation = annotation

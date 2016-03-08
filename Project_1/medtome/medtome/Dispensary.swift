@@ -14,9 +14,9 @@ class Dispensary: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var subtitle: String?
     
-    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+    init(title: String, coordinate: CLLocationCoordinate2D, subtitle: String) {
         self.title = title
         self.coordinate = coordinate
-        self.subtitle = info
+        self.subtitle = subtitle
     }
 }

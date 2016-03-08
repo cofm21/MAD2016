@@ -186,7 +186,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="map" destination="Nme-7y-ASt" id="p7F-3K-0WD"/>
-                        <segue destination="4RX-pA-VTr" kind="show" identifier="Karing Kind" id="pej-Sh-bE4"/>
+                        <segue destination="4RX-pA-VTr" kind="presentation" identifier="Karing Kind" id="pej-Sh-bE4"/>
                         <segue destination="HST-Db-4dw" kind="show" identifier="Trill Alternatives" id="fm5-eZ-Qg1"/>
                         <segue destination="aGP-Ih-SZ4" kind="show" identifier="Terrapin Recreational" id="1JV-Vu-Gjb"/>
                         <segue destination="F3b-DX-vM2" kind="show" identifier="The Dandelion" id="D3T-u2-MLp"/>
@@ -319,6 +319,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygV-RL-upH">
+                                <rect key="frame" x="101" y="305" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
