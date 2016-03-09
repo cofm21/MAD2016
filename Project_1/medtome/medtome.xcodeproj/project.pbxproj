@@ -16,6 +16,10 @@
 		FC67C3E21C85F8D900434F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC67C3E01C85F8D900434F84 /* LaunchScreen.storyboard */; };
 		FC7BDB511C8E3B2200E14B6A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7BDB501C8E3B2200E14B6A /* MapKit.framework */; };
 		FC7BDB531C8E3BBC00E14B6A /* Dispensary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BDB521C8E3BBC00E14B6A /* Dispensary.swift */; };
+		FCBEB81B1C8FCFE700DE1DD3 /* trillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEB81A1C8FCFE700DE1DD3 /* trillViewController.swift */; };
+		FCBEB81D1C8FD27F00DE1DD3 /* dandelionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEB81C1C8FD27F00DE1DD3 /* dandelionViewController.swift */; };
+		FCBEB81F1C8FD5B400DE1DD3 /* terrapinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBEB81E1C8FD5B400DE1DD3 /* terrapinViewController.swift */; };
+		FCC697E71C8F67DF00B6B04B /* kkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC697E61C8F67DF00B6B04B /* kkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		FC67C3E31C85F8D900434F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7BDB501C8E3B2200E14B6A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FC7BDB521C8E3BBC00E14B6A /* Dispensary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispensary.swift; sourceTree = "<group>"; };
+		FCBEB81A1C8FCFE700DE1DD3 /* trillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trillViewController.swift; sourceTree = "<group>"; };
+		FCBEB81C1C8FD27F00DE1DD3 /* dandelionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dandelionViewController.swift; sourceTree = "<group>"; };
+		FCBEB81E1C8FD5B400DE1DD3 /* terrapinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = terrapinViewController.swift; sourceTree = "<group>"; };
+		FCC697E61C8F67DF00B6B04B /* kkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,10 @@
 				FC67C3D71C85F8D900434F84 /* AppDelegate.swift */,
 				FC67C3D91C85F8D900434F84 /* ViewController.swift */,
 				FC67C3DB1C85F8D900434F84 /* Main.storyboard */,
+				FCBEB81E1C8FD5B400DE1DD3 /* terrapinViewController.swift */,
+				FCC697E61C8F67DF00B6B04B /* kkViewController.swift */,
+				FCBEB81C1C8FD27F00DE1DD3 /* dandelionViewController.swift */,
+				FCBEB81A1C8FCFE700DE1DD3 /* trillViewController.swift */,
 				FC5D4E411C87E95500F0313E /* MapViewController.swift */,
 				FC7BDB521C8E3BBC00E14B6A /* Dispensary.swift */,
 				FC67C3DE1C85F8D900434F84 /* Assets.xcassets */,
@@ -225,10 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBEB81B1C8FCFE700DE1DD3 /* trillViewController.swift in Sources */,
 				FC67C3DA1C85F8D900434F84 /* ViewController.swift in Sources */,
+				FCBEB81D1C8FD27F00DE1DD3 /* dandelionViewController.swift in Sources */,
+				FCBEB81F1C8FD5B400DE1DD3 /* terrapinViewController.swift in Sources */,
 				FC7BDB531C8E3BBC00E14B6A /* Dispensary.swift in Sources */,
 				FC5D4E421C87E95500F0313E /* MapViewController.swift in Sources */,
 				FC67C3D81C85F8D900434F84 /* AppDelegate.swift in Sources */,
+				FCC697E71C8F67DF00B6B04B /* kkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

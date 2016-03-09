@@ -29,9 +29,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let trill = Dispensary(title: "Trill Alternatives", coordinate: CLLocationCoordinate2D(latitude: 40.019390, longitude: -105.275184), subtitle: "A medical dispensary and personal favorite.")
         let terrapin = Dispensary(title: "Terrapin Recreational", coordinate: CLLocationCoordinate2D(latitude: 40.025515, longitude: -105.264663), subtitle: "A 21+ dispensary with great prices.")
         let dandelion = Dispensary(title: "The Dandelion", coordinate: CLLocationCoordinate2D(latitude: 40.016371, longitude: -105.284096), subtitle: "Famous for it's in house strains.")
-        let driver = Dispensary(title: "I am a driver", coordinate: CLLocationCoordinate2D(latitude: 40.029092, longitude: -105.258605), subtitle: "Here is my current location.")
+
         
-        map.addAnnotations([kk, trill, terrapin, dandelion, driver])
+        map.addAnnotations([kk, trill, terrapin, dandelion])
         
         let latDelta:CLLocationDegrees = 0.1
         
@@ -163,6 +163,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         performSegueWithIdentifier(placeName!, sender: control)
     }
+    
     
     
     override func didReceiveMemoryWarning() {
