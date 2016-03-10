@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>Alfalfa's</key>
 	<array>
-		<string>Alfalfa's</string>
-		<string>King Soopers</string>
-		<string>Safeway</string>
-		<string>Walgreens</string>
 	</array>
+	<key>King Soopers</key>
+	<array>
+	</array>
+	<key>Safeway</key>
+	<array>
+	</array>
+	<key>Walgreens</key>
+	<array>
+	</array>
+</dict>
 </plist>
