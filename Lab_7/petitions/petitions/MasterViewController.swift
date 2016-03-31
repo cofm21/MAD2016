@@ -54,16 +54,13 @@ class MasterViewController: UITableViewController {
     func parsejson(data: NSData) {
         do {
             let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
-            //print(json)
+
             let meta = json["metadata"] as! NSDictionary
             let response = meta.objectForKey("responseInfo") as! NSDictionary
             let status = response.objectForKey("status") as! Int
             if status == 200 {
                 let allresults = json["results"] as! NSArray
                 let results = Array(allresults)
-                //for result in results {
-                //    var issues = result["issues"]!
-                //}
                 
                 for result in results {
                     guard let title = result["title"]! as? String,
