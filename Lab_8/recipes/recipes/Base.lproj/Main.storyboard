@@ -21,6 +21,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="WBx-Lh-IYA" kind="show" identifier="showdetail" id="FLG-P4-UQc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -134,6 +137,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umo-XS-tAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1791" y="239"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="YHA-9y-gP5">
+            <objects>
+                <viewController id="WBx-Lh-IYA" customClass="WebViewController" customModule="recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rP2-bs-8rw"/>
+                        <viewControllerLayoutGuide type="bottom" id="tzE-NU-s2f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lB0-IO-ILR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHf-rP-SJN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GTu-Nm-baw">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GTu-Nm-baw" firstAttribute="centerY" secondItem="XHf-rP-SJN" secondAttribute="centerY" id="DY2-Yw-e8C"/>
+                            <constraint firstItem="XHf-rP-SJN" firstAttribute="top" secondItem="lB0-IO-ILR" secondAttribute="top" id="RMN-zt-sKf"/>
+                            <constraint firstItem="XHf-rP-SJN" firstAttribute="leading" secondItem="lB0-IO-ILR" secondAttribute="leading" id="SuH-Ed-877"/>
+                            <constraint firstItem="GTu-Nm-baw" firstAttribute="centerX" secondItem="XHf-rP-SJN" secondAttribute="centerX" id="brj-6Q-YgL"/>
+                            <constraint firstAttribute="trailing" secondItem="XHf-rP-SJN" secondAttribute="trailing" id="e3S-Wy-YMM"/>
+                            <constraint firstItem="XHf-rP-SJN" firstAttribute="bottom" secondItem="tzE-NU-s2f" secondAttribute="top" id="fNs-5q-OJS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webSpinner" destination="GTu-Nm-baw" id="d54-8d-euQ"/>
+                        <outlet property="webView" destination="XHf-rP-SJN" id="dpy-eC-6D3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR5-7q-Kzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-423"/>
         </scene>
     </scenes>
 </document>

@@ -83,6 +83,18 @@ class RecipeTableViewController: UITableViewController {
         
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender:
+        AnyObject?) {
+            
+            if segue.identifier == "showdetail" {
+                let detailVC = segue.destinationViewController as! WebViewController
+                let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+                let recipe = recipes[indexPath.row]
+                detailVC.title = recipe.name
+                detailVC.webpage = recipe.url
+            }
+    }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -96,25 +108,27 @@ class RecipeTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let recipe = recipes[indexPath.row]
+            let reciperef = ref.childByAppendingPath(recipe.name)
+            reciperef.ref.removeValue()
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

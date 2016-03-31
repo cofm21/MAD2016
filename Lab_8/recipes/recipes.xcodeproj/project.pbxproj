@@ -15,6 +15,7 @@
 		FC0D6EED1C9B03E00027DDC7 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D6EEC1C9B03E00027DDC7 /* RecipeTableViewController.swift */; };
 		FC0D6EEF1C9B04070027DDC7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D6EEE1C9B04070027DDC7 /* AddViewController.swift */; };
 		FC0D6EF11C9B0C6D0027DDC7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D6EF01C9B0C6D0027DDC7 /* Recipe.swift */; };
+		FCF166631CACA9A100B11BA9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF166621CACA9A100B11BA9 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC0D6EEC1C9B03E00027DDC7 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		FC0D6EEE1C9B04070027DDC7 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		FC0D6EF01C9B0C6D0027DDC7 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		FCF166621CACA9A100B11BA9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				FC0D6EDA1C9B03350027DDC7 /* AppDelegate.swift */,
 				FC0D6EDE1C9B03350027DDC7 /* Main.storyboard */,
+				FCF166621CACA9A100B11BA9 /* WebViewController.swift */,
 				FC0D6EF01C9B0C6D0027DDC7 /* Recipe.swift */,
 				FC0D6EEC1C9B03E00027DDC7 /* RecipeTableViewController.swift */,
 				FC0D6EEE1C9B04070027DDC7 /* AddViewController.swift */,
@@ -219,6 +222,7 @@
 				FC0D6EED1C9B03E00027DDC7 /* RecipeTableViewController.swift in Sources */,
 				FC0D6EF11C9B0C6D0027DDC7 /* Recipe.swift in Sources */,
 				FC0D6EDB1C9B03350027DDC7 /* AppDelegate.swift in Sources */,
+				FCF166631CACA9A100B11BA9 /* WebViewController.swift in Sources */,
 				FC0D6EEF1C9B04070027DDC7 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
