@@ -339,12 +339,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="S5l-3o-rHE"/>
                                 <exclude reference="3tz-H4-xcq"/>
                                 <exclude reference="ECq-Kt-QRX"/>
                                 <exclude reference="b6M-xK-eoh"/>
                                 <exclude reference="bHo-hf-YD9"/>
                                 <exclude reference="hzL-yv-eOu"/>
-                                <exclude reference="S5l-3o-rHE"/>
                             </mask>
                         </variation>
                     </view>
@@ -499,9 +499,9 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="dDQ-d2-A5s"/>
+                                <exclude reference="4Zc-ju-i4z"/>
                                 <exclude reference="mHM-K1-8y4"/>
                                 <exclude reference="mLm-JS-Pqs"/>
-                                <exclude reference="4Zc-ju-i4z"/>
                             </mask>
                         </variation>
                     </view>
