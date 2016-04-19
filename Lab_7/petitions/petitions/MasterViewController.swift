@@ -44,8 +44,7 @@ class MasterViewController: UITableViewController {
                 else {
                     print("file download error")
                     return
-            }
-            print("download successful")
+            }e
             dispatch_async(dispatch_get_main_queue()) {self.parsejson(data!)}
         })
         session.resume()

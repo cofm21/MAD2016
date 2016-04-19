@@ -1,0 +1,6 @@
+framework module Pods_spring_fire {
+  umbrella header "Pods-spring_fire-umbrella.h"
+
+  export *
+  module * { export * }
+}

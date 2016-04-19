@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79DCC47A9D121C636828F195 /* Pods_spring_fire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0EA077E316E7EA6C78ACE1 /* Pods_spring_fire.framework */; };
+		FCD41E821CC5DA95002C73B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD41E811CC5DA95002C73B2 /* AppDelegate.swift */; };
+		FCD41E841CC5DA95002C73B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD41E831CC5DA95002C73B2 /* ViewController.swift */; };
+		FCD41E871CC5DA95002C73B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD41E851CC5DA95002C73B2 /* Main.storyboard */; };
+		FCD41E891CC5DA95002C73B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD41E881CC5DA95002C73B2 /* Assets.xcassets */; };
+		FCD41E8C1CC5DA95002C73B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD41E8A1CC5DA95002C73B2 /* LaunchScreen.storyboard */; };
+		FCD41E941CC5DE9D002C73B2 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD41E931CC5DE9D002C73B2 /* UIImage+Gif.swift */; };
+		FCE033EE1CC6196D003C4A26 /* fire3.gif in Resources */ = {isa = PBXBuildFile; fileRef = FCE033ED1CC6196D003C4A26 /* fire3.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4110ECC1BB6DAC1C1278DF66 /* Pods-spring_fire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spring_fire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spring_fire/Pods-spring_fire.debug.xcconfig"; sourceTree = "<group>"; };
+		4D0EA077E316E7EA6C78ACE1 /* Pods_spring_fire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spring_fire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97AB2ACAEF70E88978345A8D /* Pods-spring_fire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spring_fire.release.xcconfig"; path = "Pods/Target Support Files/Pods-spring_fire/Pods-spring_fire.release.xcconfig"; sourceTree = "<group>"; };
+		FCD41E7E1CC5DA95002C73B2 /* spring_fire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spring_fire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD41E811CC5DA95002C73B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCD41E831CC5DA95002C73B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCD41E861CC5DA95002C73B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCD41E881CC5DA95002C73B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCD41E8B1CC5DA95002C73B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCD41E8D1CC5DA95002C73B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD41E931CC5DE9D002C73B2 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../UIImage+Gif.swift"; sourceTree = "<group>"; };
+		FCE033ED1CC6196D003C4A26 /* fire3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fire3.gif; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCD41E7B1CC5DA95002C73B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79DCC47A9D121C636828F195 /* Pods_spring_fire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4A7C6C3958F4D6BBD0D3F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D0EA077E316E7EA6C78ACE1 /* Pods_spring_fire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3BA3F39FB9938DF676CD18A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4110ECC1BB6DAC1C1278DF66 /* Pods-spring_fire.debug.xcconfig */,
+				97AB2ACAEF70E88978345A8D /* Pods-spring_fire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCD41E751CC5DA95002C73B2 = {
+			isa = PBXGroup;
+			children = (
+				FCD41E801CC5DA95002C73B2 /* spring_fire */,
+				FCD41E7F1CC5DA95002C73B2 /* Products */,
+				F3BA3F39FB9938DF676CD18A /* Pods */,
+				B4A7C6C3958F4D6BBD0D3F4B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCD41E7F1CC5DA95002C73B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCD41E7E1CC5DA95002C73B2 /* spring_fire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCD41E801CC5DA95002C73B2 /* spring_fire */ = {
+			isa = PBXGroup;
+			children = (
+				FCD41E931CC5DE9D002C73B2 /* UIImage+Gif.swift */,
+				FCD41E811CC5DA95002C73B2 /* AppDelegate.swift */,
+				FCD41E831CC5DA95002C73B2 /* ViewController.swift */,
+				FCD41E851CC5DA95002C73B2 /* Main.storyboard */,
+				FCD41E881CC5DA95002C73B2 /* Assets.xcassets */,
+				FCE033ED1CC6196D003C4A26 /* fire3.gif */,
+				FCD41E8A1CC5DA95002C73B2 /* LaunchScreen.storyboard */,
+				FCD41E8D1CC5DA95002C73B2 /* Info.plist */,
+			);
+			path = spring_fire;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCD41E7D1CC5DA95002C73B2 /* spring_fire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD41E901CC5DA95002C73B2 /* Build configuration list for PBXNativeTarget "spring_fire" */;
+			buildPhases = (
+				31FEBC96387C1269A2BF4C22 /* Check Pods Manifest.lock */,
+				FCD41E7A1CC5DA95002C73B2 /* Sources */,
+				FCD41E7B1CC5DA95002C73B2 /* Frameworks */,
+				FCD41E7C1CC5DA95002C73B2 /* Resources */,
+				C55086DEBA3B2F8897054182 /* Embed Pods Frameworks */,
+				0BF74B5A53FFB24D9023A1A0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = spring_fire;
+			productName = spring_fire;
+			productReference = FCD41E7E1CC5DA95002C73B2 /* spring_fire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCD41E761CC5DA95002C73B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Connor McGuinness";
+				TargetAttributes = {
+					FCD41E7D1CC5DA95002C73B2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FCD41E791CC5DA95002C73B2 /* Build configuration list for PBXProject "spring_fire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCD41E751CC5DA95002C73B2;
+			productRefGroup = FCD41E7F1CC5DA95002C73B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCD41E7D1CC5DA95002C73B2 /* spring_fire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCD41E7C1CC5DA95002C73B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD41E8C1CC5DA95002C73B2 /* LaunchScreen.storyboard in Resources */,
+				FCD41E891CC5DA95002C73B2 /* Assets.xcassets in Resources */,
+				FCE033EE1CC6196D003C4A26 /* fire3.gif in Resources */,
+				FCD41E871CC5DA95002C73B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF74B5A53FFB24D9023A1A0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spring_fire/Pods-spring_fire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31FEBC96387C1269A2BF4C22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C55086DEBA3B2F8897054182 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spring_fire/Pods-spring_fire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCD41E7A1CC5DA95002C73B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD41E941CC5DE9D002C73B2 /* UIImage+Gif.swift in Sources */,
+				FCD41E841CC5DA95002C73B2 /* ViewController.swift in Sources */,
+				FCD41E821CC5DA95002C73B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCD41E851CC5DA95002C73B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCD41E861CC5DA95002C73B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCD41E8A1CC5DA95002C73B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCD41E8B1CC5DA95002C73B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCD41E8E1CC5DA95002C73B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCD41E8F1CC5DA95002C73B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCD41E911CC5DA95002C73B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4110ECC1BB6DAC1C1278DF66 /* Pods-spring_fire.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = spring_fire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MAD2016.spring-fire";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FCD41E921CC5DA95002C73B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97AB2ACAEF70E88978345A8D /* Pods-spring_fire.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = spring_fire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MAD2016.spring-fire";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCD41E791CC5DA95002C73B2 /* Build configuration list for PBXProject "spring_fire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD41E8E1CC5DA95002C73B2 /* Debug */,
+				FCD41E8F1CC5DA95002C73B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD41E901CC5DA95002C73B2 /* Build configuration list for PBXNativeTarget "spring_fire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD41E911CC5DA95002C73B2 /* Debug */,
+				FCD41E921CC5DA95002C73B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCD41E761CC5DA95002C73B2 /* Project object */;
+}
