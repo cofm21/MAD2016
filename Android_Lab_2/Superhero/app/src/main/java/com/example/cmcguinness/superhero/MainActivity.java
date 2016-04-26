@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.FragmentTransaction;
 import android.view.View;
+import android.view.View;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity implements UniverseListFragment.UniverseListListener, HeroDetailFragment.ButtonClickListener {
 
@@ -15,19 +17,28 @@ public class MainActivity extends AppCompatActivity implements UniverseListFragm
 
     @Override
     public void itemClicked(long id) {
-        HeroDetailFragment frag = new HeroDetailFragment();
 
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        View fragmentContainer = findViewById(R.id.fragment_container);
 
-        frag.setUniverse(id);
+        if(fragmentContainer != null) {
+            HeroDetailFragment frag = new HeroDetailFragment();
 
-        ft.replace(R.id.fragment_container, frag);
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
 
-        ft.addToBackStack(null);
+            frag.setUniverse(id);
 
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.replace(R.id.fragment_container, frag);
 
-        ft.commit();
+            ft.addToBackStack(null);
+
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+
+            ft.commit();
+        } else {
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra("id", (int)id);
+            startActivity(intent);
+        }
 
     }
 

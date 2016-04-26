@@ -47,6 +47,13 @@ public class HeroDetailFragment extends Fragment implements View.OnClickListener
         if (savedInstanceState !=null){
             universeId = savedInstanceState.getLong("universeId");
         }
+        //if the hero list is empty, load heroes
+        if (Hero.heroes[0].getSuperheroes().size() == 0 ) {
+            Hero.heroes[0].loadHeroes(getActivity(), 0);
+        }
+        if (Hero.heroes[1].getSuperheroes().size() == 0 ) {
+            Hero.heroes[1].loadHeroes(getActivity(), 1);
+        }
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_hero_detail, container, false);
     }
@@ -107,6 +114,8 @@ public class HeroDetailFragment extends Fragment implements View.OnClickListener
                 Hero.heroes[(int) universeId].getSuperheroes().add(heroName);
                 //refresh the list view
                 HeroDetailFragment.this.adapter.notifyDataSetChanged();
+                Hero.heroes[(int) universeId].storeHeroes(getActivity(), universeId);
+
                 dialog.dismiss();
             }
         });
@@ -125,6 +134,22 @@ public class HeroDetailFragment extends Fragment implements View.OnClickListener
         //add the choices to the menu
         menu.add(1, 1, 1, "Yes");
         menu.add(2, 2, 2, "No");
+    }
+
+    //handle context menu item selection
+    @Override public boolean onContextItemSelected(MenuItem item){
+        //get the id of the item
+        int itemId = item.getItemId();
+        if (itemId == 1) { //if yes menu item was pressed
+            //get the position of the menu item
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+            //remove the hero
+            Hero.heroes[(int) universeId].getSuperheroes().remove(info.position);
+            //refresh the list view
+            HeroDetailFragment.this.adapter.notifyDataSetChanged();
+            Hero.heroes[(int) universeId].storeHeroes(getActivity(), universeId);
+        }
+        return true;
     }
 
 }
