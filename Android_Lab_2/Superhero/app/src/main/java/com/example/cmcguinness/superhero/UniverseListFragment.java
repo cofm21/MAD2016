@@ -1,11 +1,13 @@
 package com.example.cmcguinness.superhero;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -13,11 +15,21 @@ import android.widget.ListView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UniverseListFragment extends Fragment {
+public class UniverseListFragment extends Fragment implements AdapterView.OnItemClickListener {
 
+
+    //create listener
+    private UniverseListListener listener;
 
     public UniverseListFragment() {
         // Required empty public constructor
+    }
+
+    @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if (listener != null) {
+            //tells the listener an item was clicked
+            listener.itemClicked(id);
+        }
     }
 
     @Override
@@ -34,7 +46,18 @@ public class UniverseListFragment extends Fragment {
 
             //set the array adapter on the list view
             listUniverse.setAdapter(listAdapter);
+            listUniverse.setOnItemClickListener(this);
         }
+    }
+    //create interface
+    interface UniverseListListener {
+        void itemClicked(long id);
+    }
+
+    @Override public void onAttach(Context context) {
+        super.onAttach(context);
+        //attaches the context to the listener
+        listener = (UniverseListListener) context;
     }
 
 
