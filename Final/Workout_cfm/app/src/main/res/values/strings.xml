@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Workout_cfm</string>
+    <string name="workouts"></string>
+    <string-array name="workout_types">
+        <item>Cardio</item>
+        <item>Strength</item>
+        <item>Flexibility</item>
+    </string-array>
+</resources>
