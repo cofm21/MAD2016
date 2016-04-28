@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">SpringList</string>
-    <string name="bulbs">A picture of tulips</string>
-    <string-array name="bulb_types">
-        <item>Tulips</item>
-        <item>Daffodils</item>
-        <item>Iris</item>
-    </string-array>
-</resources>

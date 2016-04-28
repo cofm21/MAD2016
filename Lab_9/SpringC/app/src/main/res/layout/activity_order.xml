@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.connor.springc.OrderActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bulb name:"
+        android:id="@+id/bulbName"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity:"
+        android:id="@+id/quantityOrdered"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="55dp"/>
+
+    <EditText
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bulbEditText"
+        android:layout_toRightOf="@id/bulbName"
+        android:layout_marginLeft="12dp"
+        android:layout_alignBottom="@+id/bulbName"
+
+        />
+
+    <EditText
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantityEditText"
+        android:layout_toRightOf="@id/quantityOrdered"
+        android:layout_marginLeft="12dp"
+        android:layout_alignBottom="@+id/quantityOrdered"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/black"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="110dp"
+        android:background="#ffff0000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full name:"
+        android:id="@+id/name"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="49dp"/>
+
+    <EditText
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editName"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Street Address:"
+        android:id="@+id/streetAddress"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="18dp"/>
+
+    <EditText
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAddress"
+        android:layout_below="@+id/editName"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State:"
+        android:id="@+id/state"
+        android:layout_below="@+id/streetAddress"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="77dp"/>
+
+    <EditText
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editState"
+        android:layout_below="@+id/editAddress"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zip code:"
+        android:id="@+id/zipCode"
+        android:layout_below="@+id/state"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="55dp"/>
+
+    <EditText
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editZip"
+        android:layout_below="@+id/editState"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="3dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit order"
+        android:id="@+id/submitButton"
+        android:layout_below="@id/editZip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/submitMessage"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
