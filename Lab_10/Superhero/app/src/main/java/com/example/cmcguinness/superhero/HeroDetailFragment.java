@@ -18,19 +18,16 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class HeroDetailFragment extends Fragment implements View.OnClickListener{
-// implements View.OnClickListener
 
     public HeroDetailFragment() {
-        // Required empty public constructor
+
     }
 
     private long universeId;
-    //set the universe id
     public void setUniverse(long id){
         this.universeId = id;
     }
 
-    //create array adapter
     private ArrayAdapter<String> adapter;
 
     //create interface
@@ -47,14 +44,14 @@ public class HeroDetailFragment extends Fragment implements View.OnClickListener
         if (savedInstanceState !=null){
             universeId = savedInstanceState.getLong("universeId");
         }
-        //if the hero list is empty, load heroes
+
         if (Hero.heroes[0].getSuperheroes().size() == 0 ) {
             Hero.heroes[0].loadHeroes(getActivity(), 0);
         }
         if (Hero.heroes[1].getSuperheroes().size() == 0 ) {
             Hero.heroes[1].loadHeroes(getActivity(), 1);
         }
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_hero_detail, container, false);
     }
 
@@ -64,21 +61,19 @@ public class HeroDetailFragment extends Fragment implements View.OnClickListener
         View view = getView();
         ListView listHeroes = (ListView) view.findViewById(R.id.herolistView);
 
-        // get hero data
         ArrayList<String> herolist = new ArrayList<String>();
         herolist = Hero.heroes[(int) universeId].getSuperheroes();
-        // Hero.heroes[0].getSuperheroes();
 
-        //set the array adapter
         adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, herolist);
 
-        //bind array adapter to the list view
         listHeroes.setAdapter(adapter);
 
-        Button addButton = (Button) view.findViewById(R.id.button);
-        addButton.setOnClickListener(this);
+        Button addButton = (Button) view.findViewById(R.id.addButton);
+        //addButton.setOnClickListener(this);
+        /* ERROR: null pointer exception when above line is uncommented
+        can't figure out why! :(
+         */
 
-        //register contextmenu
         registerForContextMenu(listHeroes);
     }
 
@@ -89,8 +84,9 @@ public class HeroDetailFragment extends Fragment implements View.OnClickListener
     @Override public void onAttach(Context context){
         super.onAttach(context);
         //attaches the context to the listener
-        listener = (ButtonClickListener) context;
-
+        if (context instanceof ButtonClickListener) {
+            listener = (ButtonClickListener) context; //causes crash
+        }
     }
 
     @Override public void onClick(View view){
