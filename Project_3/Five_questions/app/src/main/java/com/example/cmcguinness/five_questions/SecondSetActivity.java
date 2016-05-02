@@ -161,7 +161,6 @@ public class SecondSetActivity extends Activity {
             } else {
                 refreshButtonText(button3, 2, q_food);
             }
-            refreshButtonText(button3, 2, q_vacations);
             question.setText(array[1]);
             question.setTextSize(40);
         }
