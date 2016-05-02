@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Five_questions</string>
+    <string name="blue">blue</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="black">black</string>
+</resources>
